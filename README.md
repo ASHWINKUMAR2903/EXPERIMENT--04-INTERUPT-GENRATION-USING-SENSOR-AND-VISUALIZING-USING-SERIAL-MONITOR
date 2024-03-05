@@ -1,8 +1,7 @@
-###  DATE: 
-
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  DATE: 05 - 03  - 2024
+###  NAME: A.ASHWIN KUMAR
+###  ROLL NO : 212222100006
+###  DEPARTMENT: CSE(Cyber Security)
 
 
 # EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR
@@ -118,15 +117,51 @@ The diagram below shows how the GPIO pins are connected to the 16 interrupt line
   
 
 ## STM 32 CUBE PROGRAM :
+```
+#include "main.h"
+#include "stdio.h"
 
+#if defined (_ICCARM) || defined (_ARMCC_VERSION)
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE *f)
+#elif defined(_GNUC_)
 
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif
 
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+	if(HAL_GPIO_ReadPin(GPIOB,GPIO_PIN_4)==0)
+	{
+		printf("obstacle found\n");
+		HAL_Delay(500);
+	}
+	else
+	{
+		printf("obstacle not found\n");
+		HAL_Delay(500);
+	}
+}
+
+PUTCHAR_PROTOTYPE
+{
+
+  HAL_UART_Transmit(&huart2, (uint8_t *)&ch, 1, 0xFFFF);
+
+  return ch;
+}
+```
 ## Output screen shots of serial port utility   :
- 
- 
- ## Circuit board :
- 
- 
- 
+## Circuit board with Obstacle:
+<img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/04830792-2b98-4c0d-b3a9-9339e70138ef" width="800" height="800"> 
+
+### Obstacle Found:
+<img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/0a62a8b8-2ed1-4897-90b2-d0083d4f3efe" width="1000" height="800"> 
+
+## Circuit board Without obstacle:
+<img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/b88e893c-6b12-4bd4-98d9-3f0d9d231d9e" width="800" height="800"> 
+
+### Obstacle NotFound:
+<img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/286d3371-a86b-4ab0-abe7-ba5aabaa6dd4" width="1000" height="800"> 
+
 ## Result :
 Interfacing a  IR SENSOR and interrupt is generated using external interrupt mode , visualized on serial port 
