@@ -151,16 +151,21 @@ PUTCHAR_PROTOTYPE
 }
 ```
 ## Output screen shots of serial port utility   :
+
 ## Circuit board with Obstacle:
+
 <img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/04830792-2b98-4c0d-b3a9-9339e70138ef" width="800" height="800"> 
 
 ### Obstacle Found:
+
 <img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/0a62a8b8-2ed1-4897-90b2-d0083d4f3efe" width="1000" height="800"> 
 
 ## Circuit board Without obstacle:
+
 <img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/b88e893c-6b12-4bd4-98d9-3f0d9d231d9e" width="800" height="800"> 
 
 ### Obstacle NotFound:
+
 <img src="https://github.com/ASHWINKUMAR2903/EXPERIMENT--04-INTERUPT-GENRATION-USING-SENSOR-AND-VISUALIZING-USING-SERIAL-MONITOR/assets/119407186/286d3371-a86b-4ab0-abe7-ba5aabaa6dd4" width="1000" height="800"> 
 
 ## Result :
